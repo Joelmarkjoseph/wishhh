@@ -12,6 +12,7 @@ function sendMessage() {
     // Check if the message contains any gratitude keywords
     const gratitudeKeywords = ['thanks', 'tq', 'tankoo', 'thank', 'same to you raa'];
     const containsGratitudeKeyword = gratitudeKeywords.some(keyword => message.includes(keyword));
+    const containsdobbai = ['dobbai','dobbaii','dobai'].some(keyword => message.includes(keyword));
 
     // Display the sender's message
     if (message === 'bintu') {
@@ -19,20 +20,20 @@ function sendMessage() {
         input.placeholder = 'Type dobbai...';
 
         setTimeout(() => {
-            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii', 'Happy Friendship Day mai!!!', 'aagu niku okati choopinchali','aithe naku oka help cheyyali','okasari dobbai anochugaa'], 'bintu');
-        }, 2000);
+            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii','ninnu chaala saarlu visigichutaa kadhaa','okasari aithe na overthinking valla yedchesaav monna','parledhle bestie kadha yeduvu yeduvu 😂😂','em kaadhle thattuko','mmm by the way inkoti cheppali', 'Advanced Happy Friendship Day mai!!!','🥳🥳🥳','repu clg vundadhu gaa andhuke eroju cheppa', 'aagu niku okati choopinchali','aithe naku oka help cheyyali','okasari dobbai anochugaa appude choopisthaa'], 'bintu');
+        }, 3500);
     } else if (containsGratitudeKeyword) {
         displayMessage(message, 'sender');
         setTimeout(() => {
             displayMessage('paguluddhi 😂', 'bintu');
         }, 2000);
-    } else if (message === 'dobbai') {
+    } else if (containsdobbai)  {
         displayMessage(message, 'sender');
         setTimeout(() => {
-            displayMessages(['dobbesthunna', 'dobbesthunna', 'dobbesaaaaa','sare sare choopisthale aagu','e link click chey'], 'bintu');
+            displayMessages(['dobbesthunna', 'dobbesthunna', 'dobbesaaaaaaaaaaaaa','👻👻👻👻👻','sare sare choopisthale aagu','e link click chey'], 'bintu');
             setTimeout(() => {
                 displayLink();
-            }, 4000); // Adjust the delay if needed
+            }, 5000); // Adjust the delay if needed
         }, 2000);
     } else {
         displayMessage(message, 'sender');
