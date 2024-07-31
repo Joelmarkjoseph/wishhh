@@ -16,12 +16,16 @@ function sendMessage() {
 
     // Display the sender's message
     if (message === 'bintu') {
+        var music = document.getElementById("background-music");
+    music.play().catch(function (error) {
+      console.log("Music playback failed:", error);
+    });
         displayMessage('bintu', 'sender');
         input.placeholder = 'Type dobbai...';
 
         setTimeout(() => {
-            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii','ninnu chaala saarlu visigichutaa kadhaa','okasari aithe na overthinking valla yedchesaav monna','parledhle bestie kadha yeduvu yeduvu 😂😂','em kaadhle thattuko','mmm by the way inkoti cheppali', 'Advanced Happy Friendship Day mai!!!','🥳🥳🥳','repu clg vundadhu gaa andhuke eroju cheppa', 'aagu niku okati choopinchali','aithe naku oka help cheyyali','okasari dobbai anochugaa appude choopisthaa'], 'bintu');
-        }, 3500);
+            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii','ninnu chaala saarlu visigichutaa kadhaa','okasari aithe na overthinking valla yedchesaav monna','parledhle bestie kadha yeduvu yeduvu 😂😂','em kaadhle thattuko','mmm by the way inkoti cheppali', 'Advanced Happy Friendship Day mai!!!','🥳🥳🥳','repu sunday clg vundadhu gaa andhuke eroju cheppa', 'aagu niku okati choopinchali','aithe naku oka help cheyyali','okasari dobbai anochugaa appude choopisthaa'], 'bintu');
+        }, 2000);
     } else if (containsGratitudeKeyword) {
         displayMessage(message, 'sender');
         setTimeout(() => {
@@ -33,7 +37,7 @@ function sendMessage() {
             displayMessages(['dobbesthunna', 'dobbesthunna', 'dobbesaaaaaaaaaaaaa','👻👻👻👻👻','sare sare choopisthale aagu','e link click chey'], 'bintu');
             setTimeout(() => {
                 displayLink();
-            }, 5000); // Adjust the delay if needed
+            }, 8000); // Adjust the delay if needed
         }, 2000);
     } else {
         displayMessage(message, 'sender');
@@ -45,7 +49,7 @@ function sendMessage() {
 
 function displayMessages(messages, type) {
     messages.forEach((message, index) => {
-        setTimeout(() => displayMessage(message, type), index * 1000);
+        setTimeout(() => displayMessage(message, type), index * 2000);
     });
 }
 
