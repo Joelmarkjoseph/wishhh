@@ -25,7 +25,7 @@ function sendMessage() {
         input.placeholder = 'Type dobbai...';
 
         setTimeout(() => {
-            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii','ninnu chaala saarlu visigichutaa kadhaa','okasari aithe na overthinking valla yedchesaav monna','parledhle bestie kadha yeduvu yeduvu 😂😂','em kaadhle thattuko','mmm by the way inkoti cheppali', 'Advanced Happy Friendship Day mai!!!','🥳🥳🥳','repu sunday clg vundadhu gaa andhuke eroju cheppa', 'aagu niku okati choopinchali','aithe naku oka help cheyyali','okasari dobbai anochugaa appude choopisthaa'], 'bintu');
+            displayMessages(['ha mai', 'vunna vunna', 'enti u dongiii','ninnu chaala saarlu visigichutaa kadhaa','okasari aithe na overthinking valla yedchesaav monna','parledhle bestie kadha yeduvu yeduvu 😂😂','em kaadhle thattuko','mmm by the way inkoti cheppali', 'yento gueess chey chooddam!!','vadhule aagu nene cheptha','repu sunday clg vundadhu gaa andhuke eroju cheppthunna','nenu chepthaa','but naku oka help cheyyali','okasari dobbai anochugaa appude cheptha'], 'bintu');
         }, 2000);
     } else if (containsGratitudeKeyword) {
         displayMessage(message, 'sender');
@@ -40,6 +40,7 @@ function sendMessage() {
                 displayLink();
             }, 10000); // Adjust the delay if needed
         }, 2000);
+        music.pause();
     } else {
         displayMessage(message, 'sender');
     }
@@ -71,7 +72,7 @@ function displayLink() {
     const linkElement = document.createElement('a');
     linkElement.href = 'wishes.mp4'; // Replace with the actual video URL
     linkElement.textContent = 'click here';
-    linkElement.target = '_blank'; // Opens the link in a new tab
+    linkElement.target = '_self'; // Opens the link in a new tab
 
     linkDiv.appendChild(linkElement);
     chatWindow.appendChild(linkDiv);
