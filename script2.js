@@ -13,14 +13,15 @@ function sendMessage() {
     const gratitudeKeywords = ['thanks', 'tq', 'tankoo', 'thank', 'same to you raa'];
     const containsGratitudeKeyword = gratitudeKeywords.some(keyword => message.includes(keyword));
     const containsdobbai = ['dobbai','dobbaii','dobai'].some(keyword => message.includes(keyword));
+    const containsbintu = ['bintu'].some(keyword => message.includes(keyword));
 
     // Display the sender's message
-    if (message === 'bintu') {
+    if (containsbintu) {
         var music = document.getElementById("background-music");
     music.play().catch(function (error) {
       console.log("Music playback failed:", error);
     });
-        displayMessage('bintu', 'sender');
+        displayMessage(message, 'sender');
         input.placeholder = 'Type dobbai...';
 
         setTimeout(() => {
@@ -37,7 +38,7 @@ function sendMessage() {
             displayMessages(['dobbesthunna', 'dobbesthunna', 'dobbesaaaaaaaaaaaaa','👻👻👻👻👻','sare sare choopisthale aagu','e link click chey'], 'bintu');
             setTimeout(() => {
                 displayLink();
-            }, 8000); // Adjust the delay if needed
+            }, 10000); // Adjust the delay if needed
         }, 2000);
     } else {
         displayMessage(message, 'sender');
@@ -69,7 +70,7 @@ function displayLink() {
 
     const linkElement = document.createElement('a');
     linkElement.href = 'sajni.mp4'; // Replace with the actual video URL
-    linkElement.textContent = 'secret';
+    linkElement.textContent = 'click here';
     linkElement.target = '_blank'; // Opens the link in a new tab
 
     linkDiv.appendChild(linkElement);
