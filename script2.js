@@ -69,7 +69,7 @@ function displayLink() {
     linkDiv.className = 'message bintu'; // Use 'bintu' or any class for styling
 
     const linkElement = document.createElement('a');
-    linkElement.href = 'sajni.mp4'; // Replace with the actual video URL
+    linkElement.href = 'wishes.mp4'; // Replace with the actual video URL
     linkElement.textContent = 'click here';
     linkElement.target = '_blank'; // Opens the link in a new tab
 
