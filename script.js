@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener('submit', (event) => {
       const password = passwordInput.value;
   
-      if (password === "dobbai") {
+      if ((password).toLowerCase() === "dobbai" ) {
         // If the password is "dobbai", navigate to wishes.html
         event.preventDefault(); // Prevent the form from submitting the traditional way
         window.location.href = 'chat.html';
